@@ -2,6 +2,20 @@ spring:
   application:
     name:
       suitcase-notification
+  boot:
+    admin:
+      client:
+        url: http://suitcase-admin:8085  # Адрес сервера SBA
+        instance:
+          name: suitcase-gateway  # Уникальное имя для каждого сервиса!
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, metrics, env, loggers
+  endpoint:
+    health:
+      show-details: always
 
   rabbitmq:
     host: 103.74.93.74
