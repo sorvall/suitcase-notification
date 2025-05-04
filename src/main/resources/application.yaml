@@ -7,7 +7,7 @@ spring:
       client:
         url: http://suitcase-admin:8085  # Адрес сервера SBA
         instance:
-          name: suitcase-gateway  # Уникальное имя для каждого сервиса!
+          name: suitcase-notification  # Уникальное имя для каждого сервиса!
 management:
   endpoints:
     web:
