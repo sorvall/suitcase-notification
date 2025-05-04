@@ -1,0 +1,17 @@
+spring:
+  application:
+    name:
+      suitcase-notification
+
+  rabbitmq:
+    host: 103.74.93.74
+    port: 5672
+    username: admin
+    password: admin
+
+telegram:
+  bot:
+    token: 1922316022:AAE5iV_SjRuDvl2QvL1cXrbjGm9TKUG87bM
+  chat:
+    id: 917477718
+
