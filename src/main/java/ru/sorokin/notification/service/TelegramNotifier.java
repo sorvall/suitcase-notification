@@ -11,7 +11,7 @@ public class TelegramNotifier {
 
     @Value("${telegram.chat.id}")
     private String chatId;
-з
+
     private final TelegramClient telegramClient;
 
     public TelegramNotifier(TelegramClient telegramClient) {
