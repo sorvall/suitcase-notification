@@ -59,4 +59,4 @@ jobs:
             docker build -t suitcase-notification .
 
             # Запустить новый контейнер
-            docker run -d -p 8082:8082 --name suitcase-notification-container suitcase-notification
+            docker run -d -p 8082:8082 --name suitcase-notification-container suitcase-notification --network suitcase-network suitcase-booking
