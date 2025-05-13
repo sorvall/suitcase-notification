@@ -1,28 +1,22 @@
 spring:
-  application:
-    name:
-      suitcase-notification
-  rabbitmq:
-    host: 103.74.93.74
-    port: 5672
-    username: admin
-    password: HyEaPMAr
-    virtual-host: /app
   boot:
     admin:
       client:
-        url: http://bikeboxgo.ru:8085  # Адрес сервера SBA
+        url: http://suitcase-admin-container:8085
         instance:
-          name: suitcase-notification  # Уникальное имя для каждого сервиса!
+          service-base-url: http://suitcase-notification-container:8082
+  application:
+    name: suitcase-notification
+
 management:
   endpoints:
     web:
       exposure:
-        include: health, info, metrics, env, loggers
-  endpoint:
-    health:
-      show-details: always
+        include: "*"
 
+
+server:
+  port: 8082
 
 
 telegram:
