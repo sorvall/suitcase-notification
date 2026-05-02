@@ -28,6 +28,11 @@ spring:
             enable: ${MAIL_STARTTLS:false}
           ssl:
             enable: ${MAIL_SMTP_SSL:true}
+          # Яндекс 465 + JavaMail; порт должен совпадать с spring.mail.port
+          socketFactory:
+            port: ${MAIL_PORT:465}
+            class: javax.net.ssl.SSLSocketFactory
+          socketFactoryFallback: false
 
 management:
   endpoints:

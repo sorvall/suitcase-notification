@@ -58,5 +58,7 @@ jobs:
             # Построить новый образ
             docker build -t suitcase-notification .
 
-            # Запустить новый контейнер
-            docker run -d -p 8082:8082 --name suitcase-notification-container --network suitcase-network suitcase-notification
+            # Запустить новый контейнер (в GitHub: Settings → Secrets → MAIL_PASSWORD = пароль приложения Яндекса)
+            docker run -d -p 8082:8082 --name suitcase-notification-container --network suitcase-network \
+              -e "MAIL_PASSWORD=${{ secrets.MAIL_PASSWORD }}" \
+              suitcase-notification
