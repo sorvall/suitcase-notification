@@ -1,5 +1,4 @@
-# Используем официальный образ OpenJDK
-FROM openjdk:21-jdk-slim
+FROM eclipse-temurin:21-jre-jammy
 
 # Указываем рабочую директорию в контейнере
 WORKDIR /app
