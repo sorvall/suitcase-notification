@@ -10,7 +10,6 @@ public class Test {
 
     @GetMapping("/check")
     public String get() {
-        // telegramNotifier.sendMessage("Hello World");
         return "Hello World";
     }
 }

@@ -45,14 +45,10 @@ server:
   port: 8082
 
 
-# Telegram (отключено)
-#telegram:
-#  bot:
-#    token: 7562874107:AAHieZYRxAyuNldn8K_aWXb3eRKOVKPGB-k
-#  chat:
-#    id: 917477718
-
 notification:
+  rabbit:
+    # Имя очереди в RabbitMQ (менять нельзя — совместимость с паблишерами)
+    incoming-queue: telegram.queue
   email:
     to: sorvall@mail.ru
     subject: Suitcase notification
