@@ -40,11 +40,12 @@ server:
   port: 8082
 
 
-telegram:
-  bot:
-    token: 7562874107:AAHieZYRxAyuNldn8K_aWXb3eRKOVKPGB-k
-  chat:
-    id: 917477718
+# Telegram (отключено)
+#telegram:
+#  bot:
+#    token: 7562874107:AAHieZYRxAyuNldn8K_aWXb3eRKOVKPGB-k
+#  chat:
+#    id: 917477718
 
 notification:
   email:
