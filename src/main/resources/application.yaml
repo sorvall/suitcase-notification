@@ -1,6 +1,6 @@
 spring:
   rabbitmq:
-    host: 103.74.93.74
+    host: suitcase-app-rabbitmq-1  # контейнер RabbitMQ во внутренней сети suitcase-network
     port: 5672
     username: admin
     password: HyEaPMAr
